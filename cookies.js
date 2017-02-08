@@ -15,9 +15,9 @@
 			}, 1000);
 		},
 
-		// Check if the navigator accepts cookies
+		// Check if the navigator already has accepted cookies
 		accepted: function(){
-			return navigator.cookieEnabled && !!document.cookie;
+			return navigator.cookieEnabled && !!document.cookie && cookies.get('visited');
 		},
 
 		// Get a cookie
