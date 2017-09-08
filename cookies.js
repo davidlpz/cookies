@@ -34,13 +34,13 @@
 		set: function(name, value, days){
 			var d = new Date();
 			d.setTime(d.getTime() + (days*24*60*60*1000));
-			document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=' + window.location.pathname;
+			document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/';
 		},
 
 		// Delete a cookie
 		delete: function(name){
 			if (cookies.get(name))
-			document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=' + window.location.pathname;
+			document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/';
 		},
 
 	}
